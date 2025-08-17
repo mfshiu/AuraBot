@@ -1,13 +1,12 @@
 from agentflow.core.agent import Agent
-from services.text.text_service import TextService
 
 from logging import Logger
 logger:Logger = __import__('src').get_logger()
 
 
-class IntentAgent(Agent):
+class SummarizationAgent(Agent):
     def __init__(self, cfg):
-        super().__init__(f'pdf.{TextService.NAME}', cfg)
+        super().__init__(f'summarization.aurabot', cfg)
 
 
     def handle_text_extract(self, topic:str, file_info):
