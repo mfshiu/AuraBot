@@ -1,0 +1,2 @@
+class MedReminderAgent:
+    pass

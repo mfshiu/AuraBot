@@ -1,3 +1,7 @@
+# intent.py
+# 意圖辨識模組
+# 判斷使用者的行動目的（點餐、查天氣、陪聊等）
+
 from agentflow.core.agent import Agent
 from services.text.text_service import TextService
 
@@ -5,7 +9,7 @@ from logging import Logger
 logger:Logger = __import__('src').get_logger()
 
 
-class IntentAgent(Agent):
+class Intent(Agent):
     def __init__(self, cfg):
         super().__init__(f'pdf.{TextService.NAME}', cfg)
 
